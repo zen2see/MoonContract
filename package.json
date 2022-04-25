@@ -1,0 +1,15 @@
+{
+  "name": "mooncontract",
+  "version": "1.0.0",
+  "description": "LearnWeb3 MoonContract",
+  "main": "index.ts",
+  "author": "zen2see",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/hardhat",
+      "packages/mooncontractapp"
+    ]
+  }
+}
