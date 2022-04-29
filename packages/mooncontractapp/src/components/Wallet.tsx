@@ -199,16 +199,16 @@ export const Wallet = () => {
 
   const chainData = getChainData(chainId)
   const [loadingState, setLoadingState] = useState('not-loaded')
-  const [onvs, setOnvs] = useState(Array())
+  // const [mood, setMood] = useState()
   
   console.log(loadingState)
   console.log(chainData)
   console.log(state)
-
+  
   return (
     <>  
       <div className={`${styles.bgPrimary} flex-1 items-center`}>
-        {address && (
+        {address ? (
           <div className={'flex font-semibold'}>
             <div className={`text-fuchsia-300`}>
               <p className={` `}>
@@ -219,16 +219,16 @@ export const Wallet = () => {
               </p>
             </div>
           </div>
-        )}
+        ) : <p className={`${styles.bgPrimary} flex-grow`} > </p>}
         <div />
         
         <div className={`${styles.whiteText} absolute right-10 top-2`}>
           {web3Provider ? (
-            <button className={`${styles.btnDisconnect} button`} type='button' onClick={disconnect}>
+            <button className={`${styles.btnDisconnect} `} onClick={disconnect}>
               Disconnect wallet
             </button>
           ) : (
-            <button className={`${styles.btnConnect} button`} type='button' onClick={connect}>
+            <button className={`${styles.btnConnect} `} onClick={connect}>
               Connect wallet
             </button>
           )}

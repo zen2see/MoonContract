@@ -20,10 +20,15 @@ const styles = {
   pText: "my-5 minmd:my-10 font-IBMPlex font-light text-xl minmd:text-3xl minlg:text-4xl minmd:leading-16",
   descriptionText: "my-5 minmd:my-10 font-IBMPlex font-light text-xl minmd:text-3xl minlg:text-4xl minmd:leading-16",
   btnText: "text-white font-IBMPlex minmd:text-lg",
-  
+
+  moodStatusText: "text-orange-400 font-extrabold italic text-2xl BlinkMacSystemFont",
+  moodText: "font-IBMPlex font-light text-lg",
+  moodBtn: "rounded-lg py-1 px-4 text-white text-lg bg-gradient-to-r from-cyan-500 to-blue-500 bg-gradient-to-r from-purple-500 to-pink-500 hover: bg-gradient-to-r from-cyan-500 to-blue-500",
+
+  inputText: "font-IBMPlex font-extrabold text-violet-900",
+
   btnPrimary: "bg-primary mt-4 py-4 px-6 text-white text-lg minmd:text-2xl font-IBMPlex font-medium rounded-lg hover:shadow-2xl",
   btnBlack: "bg-black flex items-center py-2 px-4 rounded-md mt-2 w-fit cursor-pointer",
-  
   btnConnect: "rounded-lg py-1.5 px-2 text-white text-lg bg-gradient-to-r from-cyan-500 to-blue-500 bg-gradient-to-r from-purple-500 to-pink-500 hover: bg-gradient-to-r from-cyan-500 to-blue-500",
   btnDisconnect: "rounded-lg py-1 px-3 text-white text-lg bg-gradient-to-r from-purple-500 to-pink-500",
 

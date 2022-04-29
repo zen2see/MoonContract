@@ -21,18 +21,15 @@ import type { TypedEventFilter, TypedEvent, TypedListener } from "./common";
 
 interface MoonContractInterface extends ethers.utils.Interface {
   functions: {
-    "getHodling()": FunctionFragment;
-    "setHodling(string)": FunctionFragment;
+    "getMood()": FunctionFragment;
+    "setMood(string)": FunctionFragment;
   };
 
-  encodeFunctionData(
-    functionFragment: "getHodling",
-    values?: undefined
-  ): string;
-  encodeFunctionData(functionFragment: "setHodling", values: [string]): string;
+  encodeFunctionData(functionFragment: "getMood", values?: undefined): string;
+  encodeFunctionData(functionFragment: "setMood", values: [string]): string;
 
-  decodeFunctionResult(functionFragment: "getHodling", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "setHodling", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "getMood", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "setMood", data: BytesLike): Result;
 
   events: {};
 }
@@ -81,43 +78,43 @@ export class MoonContract extends BaseContract {
   interface: MoonContractInterface;
 
   functions: {
-    getHodling(overrides?: CallOverrides): Promise<[string]>;
+    getMood(overrides?: CallOverrides): Promise<[string]>;
 
-    setHodling(
-      _hodling: string,
+    setMood(
+      _mood: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
   };
 
-  getHodling(overrides?: CallOverrides): Promise<string>;
+  getMood(overrides?: CallOverrides): Promise<string>;
 
-  setHodling(
-    _hodling: string,
+  setMood(
+    _mood: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   callStatic: {
-    getHodling(overrides?: CallOverrides): Promise<string>;
+    getMood(overrides?: CallOverrides): Promise<string>;
 
-    setHodling(_hodling: string, overrides?: CallOverrides): Promise<void>;
+    setMood(_mood: string, overrides?: CallOverrides): Promise<void>;
   };
 
   filters: {};
 
   estimateGas: {
-    getHodling(overrides?: CallOverrides): Promise<BigNumber>;
+    getMood(overrides?: CallOverrides): Promise<BigNumber>;
 
-    setHodling(
-      _hodling: string,
+    setMood(
+      _mood: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
   };
 
   populateTransaction: {
-    getHodling(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    getMood(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
-    setHodling(
-      _hodling: string,
+    setMood(
+      _mood: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
   };

@@ -9,20 +9,20 @@ import "hardhat/console.sol";
 /// @dev No side effects on the function calls
 contract MoonContract {
     /// Variable called hodling
-    string private hodling;
+    string private mood;
 
     /// @notice Get the hodling value
     /// @dev Possibly rename the function to justh holding
     /// @return Returns the value of hodling
-    function getHodling() public view returns (string memory) {
-        return hodling;
+    function getMood() public view returns (string memory) {
+        return mood;
     }
 
     /// @notice Sets the hodling value
     /// @dev Using a console log statement showing old and new values
-    /// @param _hodling The hodling value to be set
-    function setHodling(string memory _hodling) public {
-        console.log("Changing hodling from '%s' to '%s'", hodling, _hodling);
-        hodling = _hodling;
+    /// @param _mood The hodling value to be set
+    function setMood(string memory _mood) public {
+        console.log("Changing mood from '%s' to '%s'", mood, _mood);
+        mood = _mood;
     }
 }

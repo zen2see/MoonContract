@@ -2,7 +2,6 @@ import Head from 'next/head'
 import SectionWrapper from '../components/SectionWrapper'
 
 export const Home = (): JSX.Element => {
-
   return (
     <>
       <Head>
@@ -13,7 +12,7 @@ export const Home = (): JSX.Element => {
    
       <SectionWrapper
         title="The MoonContract"
-        description="Is your fuel on HODL?"
+        description="To HODL or not to HODL? What's your mood?"
         banner="banner"
       />
       {/* <SectionWrapper
